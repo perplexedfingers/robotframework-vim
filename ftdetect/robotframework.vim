@@ -1,12 +1,12 @@
 "=============================================================================
-" File:         ftdetect/robot.vim
+" File:         ftdetect/robotframework.vim
 " Author:       Michael Foukarakis
 " Version:      0.2
 " Created:      Tue 21 Dec 2010 09:08:35 AM EET
 " Last Update:  Sat Sep 14, 2013 10:53 BST
 "------------------------------------------------------------------------
 " Description:
-"   Filetype detection plugin for Robot files.
+"   Filetype detection plugin for Robot framework files.
 " WARNING:
 "   Overrides all default file type checks.
 "------------------------------------------------------------------------
@@ -27,14 +27,14 @@ au BufNewFile,BufRead *.txt call s:FTrobot()
 au BufNewFile,BufRead *.rst call s:FTrobot()
 au BufNewFile,BufRead *.html call s:FTrobot()
 " No resorting to heuristics for .robot files:
-au BufNewFile,BufRead *.robot,*.resource setlocal filetype=robot
+au BufNewFile,BufRead *.robot,*.resource setlocal filetype=robotframework
 
 func! s:FTrobot()
     let b:topl = getline(1)
     if (exists("g:robot_syntax_for_txt") && g:robot_syntax_for_txt)
     \ || b:topl =~ '\*\*\*.\{-}\*\*\*'
     \ || b:topl =~ '^# -\*- coding: robot -\*-$'
-        setlocal filetype=robot
+        setlocal filetype=robotframework
     endif
 endfunc
 

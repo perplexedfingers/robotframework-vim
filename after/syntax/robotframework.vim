@@ -1,12 +1,12 @@
 "=============================================================================
-" File:         after/syntax/robot.vim
+" File:         after/syntax/robotframework.vim
 " Author:       Michael Foukarakis
 " Version:      0.2
 " Created:      Fri 17 Dec 2010 11:31:46 AM EET
 " Last Update:  Tue 28 Jul 2015 15:39:21 AM CEST
 "------------------------------------------------------------------------
 " Description:
-"       Syntax file for Robot test framework files.
+"       Syntax file for Robot framework files.
 "------------------------------------------------------------------------
 " Installation:
 "       Drop this file into {rtp}/after/syntax
@@ -116,7 +116,7 @@ hi def link xmlLibrary              Keyword
 hi def link seleniumLibrary         Keyword
 hi def link sshLibrary              Keyword
 
-let b:current_syntax = "robot"
+let b:current_syntax = "robotframework"
 "------------------------------------------------------------------------
 let &cpo=s:cpo_save
 " vim700: set fdm=marker:
